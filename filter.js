@@ -21,6 +21,8 @@ const people = [
   },
 ];
 
+// Note:    The filter method must include a function that returns true or false
+//          The true ones get added, the false ones are not included.
 const oldEnough = people.filter(person => person.age >= 21);
 console.log(oldEnough);
 
@@ -61,6 +63,8 @@ const students = [
   },
 ];
 
+// Note:      It's a good idea to separate out more completx filtering
+//            functions into their own functions and then pass them in.
 const has5yearsExp = skill => skill.yrsExperience >= 5;
 const hasStrongSkills = student => student.skills.filter(has5yearsExp).length > 0;
 
